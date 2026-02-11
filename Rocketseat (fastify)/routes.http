@@ -1,0 +1,31 @@
+POST http://localhost:3333/videos
+Content-Type: application/json;
+
+{
+
+    "title": "Cortei meu pau com uma faca Butterfly | SANGROU??",
+    "description": "esse é o primeiro vídeo",
+    "duration": 188
+
+}
+
+###
+
+GET http://localhost:3333/videos?search
+
+
+###
+
+PUT http://localhost:3333/videos/367c030c-bcd0-4fd9-b5e3-4ea24583939b
+Content-Type: application/json;
+
+{
+
+    "title": "SIM SANGROU!!",
+    "description": "essa é uma branch",
+    "duration": 188
+
+}
+
+###
+DELETE http://localhost:3333/videos/bc90b2f2-ce86-4663-9adf-22a3147d4371

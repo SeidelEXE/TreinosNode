@@ -1,0 +1,3 @@
+quem executa scripts do package.json é sempre o npm run... e não o node run...
+
+fastify é um microframework que facilita principalmente construção e gerenciamento de rotas
