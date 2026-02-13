@@ -19,9 +19,9 @@ function App() {
     alert(frase)
   }
 
-  const enviar = async()=> {
+  var enviar = async()=> {
     await fetch(
-      'http://localhost:3333',
+      'http://localhost:3333/frase',
       {
       method: 'POST',
       headers: {

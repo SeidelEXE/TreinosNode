@@ -2,20 +2,28 @@ import express from 'express'
 import cors from 'cors'
 import Frase from 'frase.json'
 
-const app = express()
+export const app = express()
 const port = 3333
+const Frase = app.use(express.json(req.body))
 
-app.use(cors())
 app.use(express.json())
+app.use(cors({
+  origin: [
+    'http://localhost:5173',
+    'http://localhost:5173'
+  ],
+  methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization'],
+  credentials: true
+}))
 
 app.post('/', (req, res) => {
     res.send('aoba')
 })
 
-app.post('/frase', (req, res) => {
-    const { frase } = req.body
-    frase = Frase
-    console.log(Frase)
+app.get('/frase', (req, res) => {
+    Frase = app.use(express.json())
+    res.send(Frase)
     res.json({ok: true})
 })
 
