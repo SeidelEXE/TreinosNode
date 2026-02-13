@@ -4,7 +4,7 @@ import './App.css'
 function App() {
 
   const [sexos, setSexos] = useState(40)
-  const [frase, setFrase] = useState('sexobolado')
+  const [frase, setFrase] = useState('')
 
 /*  function mostraFrase(){
     setFrase(frase)
@@ -38,8 +38,8 @@ function App() {
     <>
       <div>
         quantidade de sexos: {sexos} <br />
-        <button onClick={transar}></button>
-        <button onClick={mostraValor}></button>
+        <button onClick={transar}>trepar</button>
+        <button onClick={mostraValor}>plotar valor</button>
 
         <p>texto digitado? {frase}</p>
         <input value={frase} onChange={e => setFrase(e.target.value)} type="text" /> {/* aqui você captura valores do front */}

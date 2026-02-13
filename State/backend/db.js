@@ -1,5 +1,6 @@
 import express from 'express'
 import cors from 'cors'
+import Frase from 'frase.json'
 
 const app = express()
 const port = 3333
@@ -13,8 +14,8 @@ app.post('/', (req, res) => {
 
 app.post('/frase', (req, res) => {
     const { frase } = req.body
-
-    console.log(frase)
+    frase = Frase
+    console.log(Frase)
     res.json({ok: true})
 })
 
