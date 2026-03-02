@@ -9,7 +9,7 @@ const Frase = app.use(express.json(req.body))
 app.use(express.json())
 app.use(cors({
   origin: [
-    'http://localhost:5173',
+    'http://localhost:3333',
     'http://localhost:5173'
   ],
   methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],

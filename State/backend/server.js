@@ -120,3 +120,7 @@ app.post('/frase', async (req, res) => {
 app.listen(port, () => {
   console.log(`rodando na porta ${port}`)
 })
+
+app.get('/', (req, res) => {
+  console.log('home entre muitas aspas')
+})

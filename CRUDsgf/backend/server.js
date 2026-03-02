@@ -1,12 +1,13 @@
 import express from 'express'
 import cors from 'cors'
-import 'dotenc/config'
+import 'dotenv/config'
 
 export const app = express()
-const port = 3333
-app.listen(process.env.port, () => {
-    console.log(`backend rodando na porta: , ${port}`)
+const port = 3334
+app.listen(port, () => {
+    console.log(`backend rodando na porta: ${port}`)
 })
+
 
 app.use(cors({
   origin: [
@@ -16,4 +17,8 @@ app.use(cors({
   methods: ['GET','POST','PUT','DELETE','PATCH','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization'],
   credentials: true
-}))
+})) 
+
+app.get('/bimbada', (req, res) => {
+  res.send('oie')
+})
