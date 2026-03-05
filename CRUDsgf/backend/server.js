@@ -1,5 +1,8 @@
 import express from 'express'
 import cors from 'cors'
+import { readFile, writeFile } from 'node:fs/promises'
+import { fileURLToPath } from 'node:url'
+import path from 'node:path'
 import 'dotenv/config'
 
 //Execução na porta 3334
@@ -22,9 +25,17 @@ app.use(cors({
 
 
 app.use(express.json())
-app.req('/login', (req, res) => {
-  let user = req.body
-  let password = req.body
 
-  return console.log(user, password)
+/*app.post('/login', async (req, res) => {
+  let user = await readFile(req.body);
+  let pass = await readFile(req.body);
+
+  console.log(`seu usuário é ${user} , sua senha: ${pass}`)
+})*/
+
+app.get('/login', async (req, res) => {
+  let user = await req.body
+  let pass = await req.body
+
+console.log(`seu usuário é ${user} , sua senha: ${pass}`)
 })
