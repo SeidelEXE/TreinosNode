@@ -10,7 +10,7 @@ var enviar= async() => {
   await fetch('http://localhost:3334/login', {
   method: 'POST',
   headers: {
-    'Content-Type': 'application.json',
+    'Content-Type': 'application/json',
   },
   body: JSON.stringify({
     user,
@@ -34,7 +34,7 @@ var enviar= async() => {
             <input type="password" name="password" placeholder="Sua senha"  onChange={e => setPass(e.target.value)} required />
           </label>
 
-          <button className="login-button" type="submit" onClick={enviar}>
+          <button className="login-button" type="button" onClick={enviar}>
             Conectar
           </button>
         </form>

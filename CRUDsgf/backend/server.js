@@ -33,9 +33,9 @@ app.use(express.json())
   console.log(`seu usuário é ${user} , sua senha: ${pass}`)
 })*/
 
-app.get('/login', async (req, res) => {
-  let user = await req.body
-  let pass = await req.body
+app.post('/login', async (req, res) => {
+  let user = await req.body.user
+  let pass = await req.body.pass
 
-console.log(`seu usuário é ${user} , sua senha: ${pass}`)
+  console.log(`seu usuário é ${user} , sua senha: ${pass}`)
 })
