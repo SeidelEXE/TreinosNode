@@ -1,0 +1,9 @@
+src/
+ ├── controllers/
+ ├── routes/
+ ├── services/
+ ├── middlewares/
+ ├── models/
+ ├── database/
+ │     └── connection.js
+ └── app.js
