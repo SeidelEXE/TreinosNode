@@ -1,5 +1,6 @@
-import "dotenv/config"
-import sql from "./db.js";
+import dotenv from 'dotenv'
+dotenv.config({ path: "../../.env" });
+import sql from "../../db.js";
 
 try{
     const result = await sql`SELECT 1`

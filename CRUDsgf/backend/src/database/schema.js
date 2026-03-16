@@ -1,29 +1,32 @@
 import postgres from "postgres";
 import dotenv from "dotenv";
+import sql from '../../db.js'
 
 dotenv.config({ path: "./src/.env" });
 
-const sql = postgres({
+/*const sql = postgres({
   host: process.env.DB_HOST,
   database: process.env.DB_DATABASE,
   username: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
-});
+});*/
 
-async function criarTabelaFuncionario() {
+async function insereTabelaFuncionario() {
   try {
-    await sql`
+    await sql
+    /*
+    `
     INSERT INTO funcionario (nome, cargo, status, 
     data_nascimento, telefone, senha) VALUES
     ('Seidel',
     'Administrador',
     'Ativo',
-    '01/07/2003',
+    '01-07-2003',
     '17996448979',
     'teta8979')`;
+    */
     
     
-    /*
     
     
     
@@ -36,7 +39,7 @@ async function criarTabelaFuncionario() {
         data_nascimento DATE NOT NULL,
         telefone VARCHAR(20) NOT NULL
       );
-    `;*/
+    `;
 
     console.log("Tabela 'funcionario' criada com sucesso.");
   } catch (error) {
@@ -46,4 +49,4 @@ async function criarTabelaFuncionario() {
   }
 }
 
-criarTabelaFuncionario();
+insereTabelaFuncionario();  
