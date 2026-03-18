@@ -34,10 +34,16 @@ app.use(express.json())
 })*/
 
 app.post('/login', async (req, res) => {
-  let user = await req.body.user
-  let pass = await req.body.pass
+  const { user, pass } = req.body
 
-  console.log(`seu usuário é ${user} , sua senha: ${pass}`)
+  if(!user || !pass){
+    return res.status(400).json({status: 'login ou senha incorretos!'})
+  }
+
+  const row = await db.query(
+    'SELECT user, pass FROM funcionarios where user = ? LIMIT 1',
+    [user]
+  )
 })
 
 app.post('/form', async (req, res) => {
