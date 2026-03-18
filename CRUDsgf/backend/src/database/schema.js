@@ -1,8 +1,8 @@
-import postgres from "postgres";
 import dotenv from "dotenv";
+dotenv.config({ path: "../../.env" });
 import sql from '../../db.js'
 
-dotenv.config({ path: "./src/.env" });
+
 
 /*const sql = postgres({
   host: process.env.DB_HOST,
@@ -14,7 +14,7 @@ dotenv.config({ path: "./src/.env" });
 async function insereTabelaFuncionario() {
   try {
     await sql
-    /*
+    
     `
     INSERT INTO funcionario (nome, cargo, status, 
     data_nascimento, telefone, senha) VALUES
@@ -24,12 +24,12 @@ async function insereTabelaFuncionario() {
     '01-07-2003',
     '17996448979',
     'teta8979')`;
-    */
     
     
     
     
     
+    /*
     `
       CREATE TABLE IF NOT EXISTS funcionario (
         id SERIAL PRIMARY KEY,
@@ -39,7 +39,7 @@ async function insereTabelaFuncionario() {
         data_nascimento DATE NOT NULL,
         telefone VARCHAR(20) NOT NULL
       );
-    `;
+    `;*/
 
     console.log("Tabela 'funcionario' criada com sucesso.");
   } catch (error) {

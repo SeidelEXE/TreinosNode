@@ -39,3 +39,8 @@ app.post('/login', async (req, res) => {
 
   console.log(`seu usuário é ${user} , sua senha: ${pass}`)
 })
+
+app.post('/form', async (req, res) => {
+  const { user, pass } = req.body;
+  return res.json(`user: ${user}, password: ${pass}`)
+})
